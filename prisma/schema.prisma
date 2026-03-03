@@ -1,0 +1,23 @@
+// prisma/schema.prisma
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+
+
+
+
+// עכשיו נוסיף את המודל של השיר (Track) שמתאים ל-MongoDB
+model Track {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  title         String
+  artist        String
+  albumImageUrl String   @default("https://via.placeholder.com/300")
+  previewUrl    String
+  createdAt     DateTime @default(now())
+}
