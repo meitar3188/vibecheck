@@ -4,10 +4,6 @@ stages:
   - build
   - deploy
 
-variables:
-  VERCEL_ORG_ID: $VERCEL_ORG_ID
-  VERCEL_PROJECT_ID: $VERCEL_PROJECT_ID
-
 cache:
   paths:
     - .next/cache/
