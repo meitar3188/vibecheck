@@ -31,7 +31,7 @@ deploy_staging:
   only:
     - develop
 
-# פריסה לסביבת Production (ענף main)
+# פריסה לסביבת Production (ענף main) בדיקה קטנה לטובת הרצה של deploy_staging בפעם הראשונה
 deploy_production:
   stage: deploy
   script:
